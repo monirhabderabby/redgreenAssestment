@@ -1,6 +1,5 @@
 {
     "name": "redgreen_sales",
-    "homepage": "https://monirhabderabby.github.io/redgreenAssestment",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
