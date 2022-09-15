@@ -4,17 +4,22 @@ import Navbar from "../navBar/Navbar";
 import SideBar from "../sideBar/SideBar";
 
 const Dashboard = () => {
-    const [open, setOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="">
             <Navbar />
             <div className="flex">
                 <div
                     className={`${
-                        open ? "w-[234px]" : "w-12"
+                        isOpen ? "w-[207px]" : "w-12"
                     } md:w-[234px] duration-300 relative`}
                 >
-                    <SideBar {...{ setOpen, open }} />
+                    <SideBar {...{ isOpen, setIsOpen }} />
+
+                    <div
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 absolute top-[45%] -right-4"
+                    ></div>
                 </div>
                 <div>
                     <Outlet />

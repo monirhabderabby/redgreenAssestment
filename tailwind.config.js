@@ -5,7 +5,11 @@ module.exports = {
         letterSpacing: {
             sidebarHeading: "1px",
         },
-        extend: {},
+        extend: {
+            colors: {
+                cs__gray: "#F1F3F8",
+            },
+        },
         borderRadius: {
             "4px": "4px",
             "5px": "5px",
