@@ -9,6 +9,10 @@ module.exports = {
             colors: {
                 cs__gray: "#F1F3F8",
             },
+            lineHeight: {
+                "20px": "20px",
+                "22px": "22px",
+            },
         },
         borderRadius: {
             "4px": "4px",
