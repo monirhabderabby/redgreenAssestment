@@ -12,11 +12,13 @@ module.exports = {
             lineHeight: {
                 "20px": "20px",
                 "22px": "22px",
+                "32px": "32px",
             },
         },
         borderRadius: {
             "4px": "4px",
             "5px": "5px",
+            "6px": "6px",
             full: "100%",
         },
     },
