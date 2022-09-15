@@ -21,7 +21,7 @@ const Dashboard = () => {
                         className="md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 absolute top-[45%] -right-4"
                     ></div>
                 </div>
-                <div>
+                <div className="w-full">
                     <Outlet />
                 </div>
             </div>
