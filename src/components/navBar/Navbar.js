@@ -7,17 +7,17 @@ const { Option } = Select;
 
 const Navbar = () => {
     return (
-        <div className="w-full h-[64px] flex justify-between items-center px-[6px] md:px-0">
-            <div className="md:ml-[32px] flex  items-center relative">
-                <div className="flex h-full items-center">
+        <div className="w-full h-[64px] flex justify-between items-center custom__shadow">
+            <div className="md:pl-[32px] flex  items-center relative">
+                <div className="flex h-full items-center md:w-[234px]">
                     <div className="h-5 w-5 bg-blue-500 text-center text-white rounded-full">
                         L
                     </div>
                     <p className="ml-[8px]">Logos</p>
                 </div>
-                <div className=" relative md:left-[234px] md:w-[365px] h-[32px]  ">
+                <div className="hidden md:block relative md:w-[365px] h-[32px] ">
                     <input
-                        className="sm:max-w-sm ml-2 md:ml-0 md:w-full h-full outline-none bg-[#F1F3F8] py-[7.5px] px-[6px] text-[14px] rounded-searchBar "
+                        className=" ml-2 md:ml-0 md:w-full h-full outline-none bg-[#F1F3F8] py-[7.5px] px-[6px] text-[14px] rounded-searchBar "
                         placeholder="Search"
                         type="text"
                     />
