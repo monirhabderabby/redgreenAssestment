@@ -7,7 +7,8 @@ module.exports = {
         },
         extend: {},
         borderRadius: {
-            searchBar: "4px",
+            "4px": "4px",
+            "5px": "5px",
             full: "100%",
         },
     },

@@ -8,6 +8,22 @@
     background-color: #f1f2f7;
     height: calc(100vh - 64px);
 }
+.navTitle {
+    position: relative;
+    margin-bottom: 12px;
+    width: 42px;
+    height: 14px;
+    left: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: #181818;
+}
+
 .active {
+    position: relative;
+    background-color: rgba(0, 46, 208, 0.1);
     color: #002ed0;
 }

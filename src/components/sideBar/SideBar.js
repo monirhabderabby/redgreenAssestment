@@ -1,5 +1,9 @@
 import React from "react";
+import { AiFillMessage } from "react-icons/ai";
 import { BsSearch } from "react-icons/bs";
+import { ImMenu } from "react-icons/im";
+import { IoMapSharp } from "react-icons/io5";
+import { MdInsertChart } from "react-icons/md";
 import "../../App.css";
 
 const SideBar = ({ setOpen, open }) => {
@@ -31,6 +35,61 @@ const SideBar = ({ setOpen, open }) => {
                         open ? "block" : "hidden"
                     } md:block`}
                 />
+            </div>
+            <div className="my-2 md:hidden">
+                <hr />
+            </div>
+            {/* SideBar Menu*/}
+            <p className={`navTitle md:block ${open ? "block" : "hidden"}`}>
+                MENU
+            </p>
+            <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px active">
+                <MdInsertChart
+                    className={`block float-left md:w-[20px] cursor-pointer `}
+                />
+                <span
+                    className={`md:block text-lg ml-1 font-light ${
+                        open ? "block" : "hidden"
+                    }`}
+                >
+                    Dashboard
+                </span>
+            </div>
+            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                <IoMapSharp
+                    className={`block float-left md:w-[20px] cursor-pointer `}
+                />
+                <span
+                    className={`md:block text-lg ml-1 font-light ${
+                        open ? "block" : "hidden"
+                    }`}
+                >
+                    Maps
+                </span>
+            </div>
+            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                <ImMenu
+                    className={`block float-left md:w-[20px] cursor-pointer `}
+                />
+                <span
+                    className={`md:block text-lg ml-1 font-light ${
+                        open ? "block" : "hidden"
+                    }`}
+                >
+                    Menu
+                </span>
+            </div>
+            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                <AiFillMessage
+                    className={`block float-left md:w-[20px] cursor-pointer `}
+                />
+                <span
+                    className={`md:block text-lg ml-1 font-light ${
+                        open ? "block" : "hidden"
+                    }`}
+                >
+                    Message
+                </span>
             </div>
         </div>
     );
