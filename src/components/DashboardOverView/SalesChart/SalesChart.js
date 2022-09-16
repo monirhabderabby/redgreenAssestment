@@ -28,7 +28,7 @@ const SalesChart = () => {
 
     const series = [50, 25, 25];
     return (
-        <div className=" md:col-span-4 card__shadow rounded-6px border-[1px] border-[#E3E8EF] relative">
+        <div className="overflow-auto md:col-span-4 card__shadow rounded-6px border-[1px] border-[#E3E8EF] relative">
             <header className="p-[20px] w-full flex items-center justify-between ">
                 <p className="font-normal text-[24px] leading-32px text-[#181818] font-popins">
                     Sales Chart
@@ -58,7 +58,7 @@ const SalesChart = () => {
                 </div>
             </div>
 
-            <div className="overflow-x-auto min-w-[300px] md:absolute bottom-0">
+            <div className="overflow-auto min-w-[300px] md:absolute bottom-0">
                 <ReactApexChart
                     options={options}
                     width="100%"

@@ -12,7 +12,7 @@ const Dashboard = () => {
                 <div
                     className={`${
                         isOpen ? "w-[207px]" : "w-12"
-                    } md:w-[234px] duration-300 relative`}
+                    } md:w-[207px] duration-300 fixed top-[64px]`}
                 >
                     <SideBar {...{ isOpen, setIsOpen }} />
 
@@ -21,7 +21,11 @@ const Dashboard = () => {
                         className="md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 absolute top-[45%] -right-4"
                     ></div>
                 </div>
-                <div className="w-full">
+                <div
+                    className={`w-full  relative ${
+                        isOpen ? "ml-[207px]" : "ml-12"
+                    } md:ml-[207px]`}
+                >
                     <Outlet />
                 </div>
             </div>
