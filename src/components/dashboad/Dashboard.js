@@ -4,7 +4,7 @@ import Navbar from "../navBar/Navbar";
 import SideBar from "../sideBar/SideBar";
 
 const Dashboard = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(true);
     return (
         <div className="">
             <Navbar />
@@ -12,14 +12,9 @@ const Dashboard = () => {
                 <div
                     className={`${
                         isOpen ? "w-[207px]" : "w-12"
-                    } md:w-[207px] duration-300 fixed top-[64px]`}
+                    } md:w-[207px] duration-300 fixed top-[64px] bottom-0`}
                 >
                     <SideBar {...{ isOpen, setIsOpen }} />
-
-                    <div
-                        onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 absolute top-[45%] -right-4"
-                    ></div>
                 </div>
                 <div
                     className={`w-full  relative ${
@@ -29,6 +24,12 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
             </div>
+            <div
+                onClick={() => setIsOpen(!isOpen)}
+                className={`md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 fixed top-[45%] ${
+                    isOpen ? "ml-[210px]" : "ml-12"
+                } duration-300`}
+            ></div>
         </div>
     );
 };

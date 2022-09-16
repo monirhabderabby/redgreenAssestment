@@ -10,7 +10,7 @@
 }
 .sidebar {
     background: rgba(241, 242, 247, 0.75);
-    height: calc(100vh - 64px);
+    height: calc(100vh + 64px);
 }
 .navTitle {
     position: relative;
