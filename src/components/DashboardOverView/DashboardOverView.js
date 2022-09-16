@@ -4,6 +4,7 @@ import Notification from "./Notification/Notification";
 import SaleOverview from "./SaleOverview/SaleOverview";
 import SalesChart from "./SalesChart/SalesChart";
 import TotalSales from "./TotalSales/TotalSales";
+import Weather from "./Weather/Weather";
 
 const DashboardOverView = () => {
     return (
@@ -18,7 +19,7 @@ const DashboardOverView = () => {
                 <SalesChart />
                 <MostPopulerProduct />
                 <SaleOverview />
-                <div className="bg-slate-700 md:col-span-6">05</div>
+                <Weather />
             </section>
         </div>
     );
