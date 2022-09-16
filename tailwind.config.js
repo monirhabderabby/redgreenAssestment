@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         letterSpacing: {
             sidebarHeading: "1px",
+            cardAmount: "-0.017em",
         },
         extend: {
             colors: {
@@ -24,6 +25,7 @@ module.exports = {
             "4px": "4px",
             "5px": "5px",
             "6px": "6px",
+            "8px": "8px",
             full: "100%",
         },
     },
