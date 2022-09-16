@@ -12,7 +12,12 @@ module.exports = {
             lineHeight: {
                 "20px": "20px",
                 "22px": "22px",
+                "24px": "24px",
                 "32px": "32px",
+                "38px": "38px",
+            },
+            fontFamily: {
+                popins: ["Poppins", "sans-serif"],
             },
         },
         borderRadius: {
