@@ -45,7 +45,7 @@ const TotalSales = () => {
                 </p>
                 <div className="flex items-center">
                     <DatePicker picker="month" />
-                    <BsThreeDotsVertical className="ml-[41px] text-lg" />
+                    <BsThreeDotsVertical className="ml-[10px] md:ml-[41px] text-2xl" />
                 </div>
             </header>
             <section>
