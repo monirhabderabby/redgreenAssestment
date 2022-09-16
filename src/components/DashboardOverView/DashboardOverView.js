@@ -1,6 +1,7 @@
 import React from "react";
 import MostPopulerProduct from "./MostPopulerPrduct/MostPopulerProduct";
 import Notification from "./Notification/Notification";
+import SaleOverview from "./SaleOverview/SaleOverview";
 import SalesChart from "./SalesChart/SalesChart";
 import TotalSales from "./TotalSales/TotalSales";
 
@@ -16,7 +17,7 @@ const DashboardOverView = () => {
                 <TotalSales />
                 <SalesChart />
                 <MostPopulerProduct />
-                <div className="bg-orange-400 md:col-span-6">04</div>
+                <SaleOverview />
                 <div className="bg-slate-700 md:col-span-6">05</div>
             </section>
         </div>
