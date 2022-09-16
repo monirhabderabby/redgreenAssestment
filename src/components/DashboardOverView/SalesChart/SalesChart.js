@@ -1,18 +1,34 @@
 import { Select } from "antd";
 import React from "react";
+import ReactApexChart from "react-apexcharts";
 import { BsThreeDotsVertical } from "react-icons/bs";
 const { Option } = Select;
 
 const SalesChart = () => {
-    const data = [
-        { name: "Group A", value: 400 },
-        { name: "Group B", value: 300 },
-        { name: "Group C", value: 300 },
-        { name: "Group D", value: 200 },
-    ];
-    const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
+    const options = {
+        labels: ["TV", "Laptop", "Others"],
+        chart: {
+            type: "donut",
+        },
+        colors: ["#2D5BFF", "#6284FD", "#96ADFF"],
+        responsive: [
+            {
+                breakpoint: 400,
+                options: {
+                    chart: {
+                        width: 200,
+                    },
+                    legend: {
+                        position: "bottom",
+                    },
+                },
+            },
+        ],
+    };
+
+    const series = [50, 25, 25];
     return (
-        <div className=" md:col-span-4 card__shadow rounded-6px border-[1px] border-[#E3E8EF] ">
+        <div className=" md:col-span-4 card__shadow rounded-6px border-[1px] border-[#E3E8EF] relative">
             <header className="p-[20px] w-full flex items-center justify-between ">
                 <p className="font-normal text-[24px] leading-32px text-[#181818] font-popins">
                     Sales Chart
@@ -42,7 +58,15 @@ const SalesChart = () => {
                 </div>
             </div>
 
-            <div>{/*pie chart will be here*/}</div>
+            <div className="overflow-x-auto min-w-[300px] md:absolute bottom-0">
+                <ReactApexChart
+                    options={options}
+                    width="100%"
+                    height={200}
+                    series={series}
+                    type="donut"
+                />
+            </div>
         </div>
     );
 };
