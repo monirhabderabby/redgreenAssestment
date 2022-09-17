@@ -6,9 +6,10 @@ import SideBar from "../sideBar/SideBar";
 const Dashboard = () => {
     const [isOpen, setIsOpen] = useState(true);
     return (
-        <div className="">
+        <>
             <Navbar />
             <div className="flex">
+                {/* side bar start from here*/}
                 <div
                     className={`${
                         isOpen ? "w-[207px]" : "w-12"
@@ -16,6 +17,8 @@ const Dashboard = () => {
                 >
                     <SideBar {...{ isOpen, setIsOpen }} />
                 </div>
+
+                {/* All dashboard component will be render here */}
                 <div
                     className={`w-full  relative ${
                         isOpen ? "ml-[207px]" : "ml-12"
@@ -24,13 +27,15 @@ const Dashboard = () => {
                     <Outlet />
                 </div>
             </div>
+
+            {/* toggle button for mobile devices*/}
             <div
                 onClick={() => setIsOpen(!isOpen)}
                 className={`md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 fixed top-[45%] ${
                     isOpen ? "ml-[210px]" : "ml-12"
                 } duration-300`}
             ></div>
-        </div>
+        </>
     );
 };
 

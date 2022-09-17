@@ -69,7 +69,9 @@ const TotalSales = () => {
                     <BsThreeDotsVertical className="ml-[10px] md:ml-[41px] text-2xl" />
                 </div>
             </header>
+
             <div className="grid grid-cols-12 p-[20px]">
+                {/*Total sales overview start from here*/}
                 <div className="col-span-12 md:col-span-2">
                     <div className="grid grid-cols-4 md:grid-cols-1 md:gap-y-3">
                         {product?.map((p) => {
@@ -88,9 +90,16 @@ const TotalSales = () => {
                         })}
                     </div>
                 </div>
+
+                {/* chart start from here*/}
                 <div className=" h-[150px] md:h-[250px] col-span-12 md:col-span-10">
                     <ResponsiveContainer width="100%" height="100%">
-                        <AreaChart data={data}>
+                        <AreaChart
+                            data={data}
+                            margin={{
+                                left: 20,
+                            }}
+                        >
                             <defs>
                                 <linearGradient
                                     id="colorView"
