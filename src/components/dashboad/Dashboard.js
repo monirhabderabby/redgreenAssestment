@@ -31,7 +31,7 @@ const Dashboard = () => {
             {/* toggle button for mobile devices*/}
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={`md:hidden w-3 h-[30px] rounded-5px bg-cyan-400 fixed top-[45%] ${
+                className={`md:hidden w-3 h-[30px] bg-[#808080] rounded-4px ring-2 ring-[#2D5BFF] ring-inset fixed top-60 ${
                     isOpen ? "ml-[210px]" : "ml-12"
                 } duration-300`}
             ></div>

@@ -10,6 +10,7 @@ import "../../App.css";
 const SideBar = ({ isOpen, setIsOpen }) => {
     return (
         <div className="w-full -z-10 sidebar pt-6 relative px-2">
+            {/* search bar */}
             <div className="md:hidden flex items-center rounded-searchBar bg-gray-200 px-2 py-2">
                 <BsSearch
                     className={`block float-left w-[20px] cursor-pointer ${
@@ -24,106 +25,114 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                     } md:block`}
                 />
             </div>
+
             <div className="my-2 md:hidden">
                 <hr />
             </div>
-            {/* SideBar Menu*/}
-            <p className={`navTitle md:block ${isOpen ? "block" : "hidden"}`}>
-                MENU
-            </p>
-            <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px active">
-                <MdInsertChart
-                    className={`block float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
-                        isOpen ? "block" : "hidden"
-                    }`}
-                >
-                    Dashboard
-                </span>
-            </div>
-            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
-                <IoMapSharp
-                    className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
-                        isOpen ? "block" : "hidden"
-                    }`}
-                >
-                    Maps
-                </span>
-            </div>
-            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
-                <ImMenu
-                    className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
-                        isOpen ? "block" : "hidden"
-                    }`}
-                >
-                    Menu
-                </span>
-            </div>
-            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
-                <AiFillMessage
-                    className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
-                        isOpen ? "block" : "hidden"
-                    }`}
-                >
-                    Message
-                </span>
-            </div>
 
-            {/*Others*/}
-            <p
-                className={`navTitle md:block ${
-                    isOpen ? "block" : "hidden"
-                } mb-[24px] mt-[40px]`}
-            >
-                OTHERS
-            </p>
-            <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px">
-                <AiFillSetting
-                    className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
+            {/* SideBar Menu*/}
+            <section>
+                <p
+                    className={`navTitle md:block ${
                         isOpen ? "block" : "hidden"
                     }`}
                 >
-                    Settings
-                </span>
-            </div>
-            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
-                <RiUser3Fill
-                    className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
+                    MENU
+                </p>
+                <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px active">
+                    <MdInsertChart
+                        className={`block float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Dashboard
+                    </span>
+                </div>
+                <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                    <IoMapSharp
+                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Maps
+                    </span>
+                </div>
+                <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                    <ImMenu
+                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Menu
+                    </span>
+                </div>
+                <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                    <AiFillMessage
+                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Message
+                    </span>
+                </div>
+
+                {/*Others*/}
+                <p
+                    className={`navTitle md:block ${
                         isOpen ? "block" : "hidden"
-                    }`}
+                    } mb-[24px] mt-[40px]`}
                 >
-                    Accounts
-                </span>
-            </div>
-            <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
-                <MdHelpCenter
-                    className={`block float-left text-[#E1E1E1] md:text-lg cursor-pointer `}
-                />
-                <span
-                    className={`md:block text-lg ml-2 font-light ${
-                        isOpen ? "block" : "hidden"
-                    }`}
-                >
-                    Help
-                </span>
-            </div>
+                    OTHERS
+                </p>
+                <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px">
+                    <AiFillSetting
+                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Settings
+                    </span>
+                </div>
+                <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                    <RiUser3Fill
+                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Accounts
+                    </span>
+                </div>
+                <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
+                    <MdHelpCenter
+                        className={`block float-left text-[#E1E1E1] md:text-lg cursor-pointer `}
+                    />
+                    <span
+                        className={`md:block text-lg ml-2 font-light ${
+                            isOpen ? "block" : "hidden"
+                        }`}
+                    >
+                        Help
+                    </span>
+                </div>
+            </section>
         </div>
     );
 };

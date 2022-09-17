@@ -8,7 +8,7 @@ const { Option } = Select;
 const Navbar = () => {
     return (
         <div className="w-full z-50 flex h-[64px] items-center justify-between bg-white custom__shadow px-3 md:px-[32px] sticky top-0">
-            {/*Left Side*/}
+            {/*left side of Navbar*/}
             <div className="md:w-[207px]">
                 <div className="flex h-full items-center">
                     <div className="h-5 w-5 bg-blue-500 text-center text-white rounded-full">
@@ -18,17 +18,21 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/*Right Side*/}
-            <div className="navbar__width relative flex items-center justify-end md:justify-between">
+            {/*ride side of Navbar*/}
+            <section className="navbar__width relative flex items-center justify-end md:justify-between">
                 <div className="hidden md:block md:w-[365px] h-[32px] pl-4 relative">
                     <SearchBar />
                 </div>
-                <section className="absolute md:relative right-0 flex items-center">
+                <div className="absolute md:relative right-0 flex items-center">
+                    {/* navlink || bell */}
                     <div className="relative w-[20px] h-[20px]">
                         <BsBellFill className="text-gray-400 w-full h-full" />
                         <div className="absolute top-0 right-0 bg-[#FF3030] h-[5.56px] w-[5.56px] rounded-full"></div>
                     </div>
+
+                    {/* navlink || user */}
                     <div className="flex items-center h-full ml-[10px] md:ml-[33.75px]">
+                        {/* profile image*/}
                         <div className=" w-[32px] h-[32px]">
                             <img
                                 className="h-full w-full"
@@ -36,6 +40,8 @@ const Navbar = () => {
                                 alt=""
                             />
                         </div>
+
+                        {/* profile dropdown*/}
                         <div>
                             <Select
                                 defaultValue="Riandra"
@@ -51,8 +57,8 @@ const Navbar = () => {
                             </Select>
                         </div>
                     </div>
-                </section>
-            </div>
+                </div>
+            </section>
         </div>
     );
 };
