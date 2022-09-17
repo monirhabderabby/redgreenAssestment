@@ -1,34 +1,46 @@
 import { DatePicker } from "antd";
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Area, AreaChart, ResponsiveContainer, Tooltip } from "recharts";
+import {
+    Area,
+    AreaChart,
+    CartesianGrid,
+    ResponsiveContainer,
+    Tooltip,
+    XAxis,
+} from "recharts";
 import "../../../App.css";
 
 const TotalSales = () => {
     const data = [
         {
             value: 500,
-            y: "1Jt",
+            y: 10,
+            x: 0,
         },
         {
             value: 100,
-            y: "2Jt",
+            y: 20,
+            x: 1,
         },
         {
             value: 300,
-            y: "3Jt",
+            y: 30,
+            x: 3,
         },
         {
             value: 250,
-            y: "4Jt",
-        },
-        {
-            value: 750,
-            y: "5Jt",
+            y: 40,
+            x: 4,
         },
         {
             value: 550,
-            y: "5Jt",
+            y: 50,
+            x: 5,
+        },
+        {
+            y: 60,
+            x: 6,
         },
     ];
 
@@ -76,7 +88,7 @@ const TotalSales = () => {
                         })}
                     </div>
                 </div>
-                <div className=" h-[150px] col-span-12 md:col-span-10">
+                <div className=" h-[150px] md:h-[250px] col-span-12 md:col-span-10">
                     <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={data}>
                             <defs>
@@ -99,6 +111,11 @@ const TotalSales = () => {
                                     ></stop>
                                 </linearGradient>
                             </defs>
+                            <XAxis dataKey="x" />
+                            <CartesianGrid
+                                stroke="#eee"
+                                strokeDasharray="7 7"
+                            />
                             <Tooltip />
                             <Area
                                 type="monotone"
