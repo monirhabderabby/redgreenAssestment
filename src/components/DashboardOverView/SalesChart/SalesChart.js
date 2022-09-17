@@ -11,6 +11,12 @@ const SalesChart = () => {
             type: "donut",
         },
         colors: ["#2D5BFF", "#6284FD", "#96ADFF"],
+        legend: {
+            show: true,
+            showForSingleSeries: true,
+            horizontalAlign: "left",
+            position: "right",
+        },
         responsive: [
             {
                 breakpoint: 400,
@@ -58,6 +64,7 @@ const SalesChart = () => {
                 </div>
             </div>
 
+            {/* sales chart start from here*/}
             <div className="overflow-auto min-w-[300px]">
                 <ReactApexChart
                     options={options}

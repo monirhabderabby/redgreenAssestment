@@ -45,18 +45,9 @@ const TotalSales = () => {
     ];
 
     const product = [
-        {
-            product: "TV",
-            price: "600.000",
-        },
-        {
-            product: "Laptop",
-            price: "1.200.000",
-        },
-        {
-            product: "Other",
-            price: "210.287",
-        },
+        { id: 1, product: "TV", price: "600.000" },
+        { id: 2, product: "Laptop", price: "1.200.000" },
+        { id: 3, product: "Other", price: "210.287" },
     ];
     return (
         <div className=" md:col-span-8 h-[366px] card__shadow rounded-6px border-[1px] border-[#E3E8EF]">
@@ -76,7 +67,7 @@ const TotalSales = () => {
                     <div className="grid grid-cols-4 md:grid-cols-1 md:gap-y-3">
                         {product?.map((p) => {
                             return (
-                                <>
+                                <div key={p?.id}>
                                     <div className="flex flex-col">
                                         <span className=" text-[10px] md:text-[16px] text-[#5C5C5C] font-thin font-popins">
                                             {p.product}
@@ -85,7 +76,7 @@ const TotalSales = () => {
                                             {p.price}
                                         </span>
                                     </div>
-                                </>
+                                </div>
                             );
                         })}
                     </div>

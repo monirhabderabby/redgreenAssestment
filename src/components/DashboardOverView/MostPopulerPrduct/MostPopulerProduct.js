@@ -87,6 +87,7 @@ const MostPopulerProduct = () => {
                 </div>
             </header>
 
+            {/* total products loop*/}
             <div className="w-full px-[20px]">
                 {products.map((product) => {
                     return (
@@ -95,6 +96,7 @@ const MostPopulerProduct = () => {
                 })}
             </div>
 
+            {/* bottom button*/}
             <button className="text-[10px] md:text-[14px] leading-20px font-popins text-[#2D5BFF] p-[10px] md:p-[20px] px-[40px]">
                 Show more
             </button>
