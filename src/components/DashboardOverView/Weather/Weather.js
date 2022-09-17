@@ -28,9 +28,7 @@ const Weather = () => {
                             <BsFillSunFill className="text-2xl md:text-6xl -z-10 absolute text-[#FFDA69]" />
                             <AiFillCloud className="text-4xl md:text-8xl z-40 text-[#E6E6E6]" />
                         </div>
-                        <p className="text-[10px] md:text-[18px] leading-27px text-[#181818] font-popins">
-                            Cloud Sunny, 24°C
-                        </p>
+                        <div>Cloud Sunny, 24°C</div>
                     </div>
                 </div>
                 <div className=" md:w-[250px]">
