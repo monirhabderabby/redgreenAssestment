@@ -7,7 +7,7 @@ const { Option } = Select;
 
 const Navbar = () => {
     return (
-        <div className="w-full z-50 flex h-[64px] items-center justify-between bg-white custom__shadow px-3 md:px-[32px] sticky top-0">
+        <div className="w-full z-50 flex h-[64px] items-center justify-between bg-white custom__shadow px-3 md:px-[32px] fixed top-0 right-0">
             {/*left side of Navbar*/}
             <div className="md:w-[207px]">
                 <div className="flex h-full items-center">
