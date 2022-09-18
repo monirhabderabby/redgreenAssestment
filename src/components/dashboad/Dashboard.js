@@ -4,7 +4,7 @@ import Navbar from "../navBar/Navbar";
 import SideBar from "../sideBar/SideBar";
 
 const Dashboard = () => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <>
             <Navbar />
