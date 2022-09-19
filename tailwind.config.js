@@ -9,6 +9,7 @@ module.exports = {
         extend: {
             colors: {
                 cs__gray: "#F1F3F8",
+                light_gray: "#E3E8EF",
             },
             lineHeight: {
                 "20px": "20px",

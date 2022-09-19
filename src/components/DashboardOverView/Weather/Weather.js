@@ -8,7 +8,7 @@ import {
 
 const Weather = () => {
     return (
-        <div className="md:col-span-6 w-full card__shadow rounded-6px border-[1px] border-[#E3E8EF] p-[10px] md:p-[20px] relative font-popins">
+        <div className="md:col-span-6 w-full card__shadow rounded-6px border-[1px] border-light_gray p-[10px] md:p-[20px] relative font-popins">
             <header className=" w-full flex items-center justify-between ">
                 <p className="font-normal text-[24px] leading-32px text-[#181818] font-popins">
                     Weather

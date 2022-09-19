@@ -77,7 +77,7 @@ const MostPopulerProduct = () => {
     ];
 
     return (
-        <div className=" md:col-span-6 row-span-2 h-[835px] md:h-[815px] card__shadow rounded-6px border-[1px] border-[#E3E8EF] relative">
+        <div className=" md:col-span-6 row-span-2 h-[835px] md:h-[815px] card__shadow rounded-6px border-[1px] border-light_gray relative">
             <header className="p-[20px] w-full flex items-center justify-between ">
                 <p className="font-normal text-[24px] leading-32px text-[#181818] font-popins">
                     Most Populer Product
