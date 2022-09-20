@@ -55,7 +55,7 @@ const Weather = () => {
                 </div>
             </div>
 
-            <div className="flex justify-between  items-center relative overflow-x-auto">
+            <div className="flex justify-between w-full  items-center relative overflow-x-auto">
                 <div className="w-[160px] h-full">
                     <div className="flex flex-col justify-center items-center h-full">
                         <h1 className="text-[12px] md:text-[28px] font-popins text-[#181818]">
@@ -68,7 +68,7 @@ const Weather = () => {
                         <div>Cloud Sunny, 24°C</div>
                     </div>
                 </div>
-                <div className=" md:w-[250px] ml-8 md:ml-10 lg:ml-20 flex-auto">
+                <div className=" md:w-[250px]">
                     <div className="flex flex-col justify-end">
                         <div className="my-8 w-full">
                             <ul>
