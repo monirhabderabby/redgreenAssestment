@@ -41,10 +41,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </p>
                 <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px active">
                     <MdInsertChart
-                        className={`block float-left md:text-lg cursor-pointer `}
+                        className={`block float-left text-[#002ED0] md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#002ED0]  text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -53,10 +53,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
                     <IoMapSharp
-                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                        className={`block text-[#9DACBE] float-left md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block  text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -65,10 +65,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
                     <ImMenu
-                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                        className={`block text-[#9DACBE]  float-left md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -77,10 +77,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
                     <AiFillMessage
-                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                        className={`block text-[#9DACBE] float-left md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -98,10 +98,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </p>
                 <div className=" md:w-full md:h-[42px] md:pl-[28px] flex items-center p-2 md:px-0 rounded-5px">
                     <AiFillSetting
-                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                        className={`block text-[#9DACBE] float-left md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -110,10 +110,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
                     <RiUser3Fill
-                        className={`block text-[#E1E1E1] float-left md:text-lg cursor-pointer `}
+                        className={`block text-[#9DACBE] float-left md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
@@ -122,10 +122,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
                 </div>
                 <div className="md:w-full h-[42px] md:pl-[28px] flex items-center p-2 md:px-0">
                     <MdHelpCenter
-                        className={`block float-left text-[#E1E1E1] md:text-lg cursor-pointer `}
+                        className={`block float-left text-[#9DACBE] md:text-lg cursor-pointer `}
                     />
                     <span
-                        className={`md:block text-lg ml-2 font-light ${
+                        className={`md:block text-[#181818] text-lg ml-2 font-light ${
                             isOpen ? "block" : "hidden"
                         }`}
                     >
