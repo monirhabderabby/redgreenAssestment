@@ -12,7 +12,7 @@ const SalesChart = () => {
         },
         colors: ["#2D5BFF", "#6284FD", "#96ADFF"],
         legend: {
-            show: true,
+            show: false,
             showForSingleSeries: true,
             horizontalAlign: "left",
             position: "right",
@@ -65,14 +65,33 @@ const SalesChart = () => {
             </div>
 
             {/* sales chart start from here*/}
-            <div className="overflow-auto min-w-[200px]">
-                <ReactApexChart
-                    options={options}
-                    width="100%"
-                    height={180}
-                    series={series}
-                    type="donut"
-                />
+            <div className="overflow-auto min-w-[200px] p-[20px] grid grid-cols-1 lg:grid-cols-2  lg:absolute bottom-0">
+                <div>
+                    <ReactApexChart
+                        options={options}
+                        width="100%"
+                        height={180}
+                        series={series}
+                        type="donut"
+                    />
+                </div>
+                <div className="md:mt-10 ml-2">
+                    <div className="flex items-center gap-2">
+                        <div className="h-3 w-3 rounded-full bg-[#2D5BFF]"></div>
+                        50% TV
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="h-3 w-3 rounded-full bg-[#6284FD]"></div>
+                        25% Laptop
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <div className="h-3 w-3 rounded-full bg-[#96ADFF]"></div>
+                        15% Other
+                    </div>
+                    <button className="text-[#2D5BFF] font-popins text-[14px] leading-22px">
+                        see details
+                    </button>
+                </div>
             </div>
         </div>
     );
