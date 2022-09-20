@@ -7,6 +7,33 @@ import {
 } from "react-icons/md";
 
 const Weather = () => {
+    const wheatherData = [
+        {
+            id: 1,
+            time: "• 10:00 AM",
+            status: "Light Rain, 27°C",
+        },
+        {
+            id: 2,
+            time: "• 01:00 AM",
+            status: "Cloudy Sunny, 27°C",
+        },
+        {
+            id: 3,
+            time: "• 04:00 PM",
+            status: "Cloudy, 27°C",
+        },
+        {
+            id: 3,
+            time: "• 05:00 PM",
+            status: "Cloudy, 25°C",
+        },
+        {
+            id: 3,
+            time: "• 08:00 PM",
+            status: "Cloudy, 27°C",
+        },
+    ];
     return (
         <div className="md:col-span-6 w-full card__shadow rounded-6px border-[1px] border-light_gray p-[10px] md:p-[20px] relative font-popins">
             <header className=" w-full flex items-center justify-between ">
@@ -18,7 +45,17 @@ const Weather = () => {
                 </div>
             </header>
 
-            <div className="flex justify-between h-full relative overflow-x-auto">
+            <div className="flex items-center justify-end py-[10px]">
+                <p className="text-[10px] md:text-[16px] font-light text-[#181818] leading-20px md:mr-[24px]">
+                    Wed, 21 Sep 2022
+                </p>
+                <div className="flex">
+                    <MdOutlineArrowBackIos />
+                    <MdOutlineArrowForwardIos />
+                </div>
+            </div>
+
+            <div className="flex justify-between  items-center relative overflow-x-auto">
                 <div className="w-[160px] h-full">
                     <div className="flex flex-col justify-center items-center h-full">
                         <h1 className="text-[12px] md:text-[28px] font-popins text-[#181818]">
@@ -31,32 +68,23 @@ const Weather = () => {
                         <div>Cloud Sunny, 24°C</div>
                     </div>
                 </div>
-                <div className=" md:w-[250px]">
+                <div className=" md:w-[250px] ml-8 md:ml-10 lg:ml-20 flex-auto">
                     <div className="flex flex-col justify-end">
-                        <div className="flex items-center">
-                            <p className="text-[10px] md:text-[16px] font-light text-[#181818] leading-20px md:mr-[24px]">
-                                Wed, 21 Sep 2022
-                            </p>
-                            <div className="flex">
-                                <MdOutlineArrowBackIos />
-                                <MdOutlineArrowForwardIos />
-                            </div>
-                        </div>
-
                         <div className="my-8 w-full">
                             <ul>
-                                <li className="text-[10px] md:text-[16px] font-popins md:leading-20px text-[#5C5C5C]">
-                                    • 10:00 AM{" "}
-                                    <span className="ml-2 md:ml-8">
-                                        Light Rain, 27°C
-                                    </span>
-                                </li>
-                                <li className="text-[10px] md:text-[16px] font-popins md:leading-20px text-[#5C5C5C]">
-                                    • 10:00 AM{" "}
-                                    <span className="ml-2 md:ml-8">
-                                        Light Rain, 27°C
-                                    </span>
-                                </li>
+                                {wheatherData?.map((data) => {
+                                    return (
+                                        <li
+                                            className="text-[10px] my-2 md:text-[16px] font-popins md:leading-20px text-[#5C5C5C]"
+                                            key={data?.id}
+                                        >
+                                            {data?.time}
+                                            <span className="ml-2 md:ml-4">
+                                                {data?.status}
+                                            </span>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </div>

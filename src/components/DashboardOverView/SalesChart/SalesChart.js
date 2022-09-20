@@ -32,6 +32,24 @@ const SalesChart = () => {
         ],
     };
 
+    const chartData = [
+        {
+            title: "50% TV",
+            color: "#2D5BFF",
+            id: 1,
+        },
+        {
+            title: "25% Laptop",
+            color: "#6284FD",
+            id: 2,
+        },
+        {
+            title: "25% Other",
+            color: "#96ADFF",
+            id: 3,
+        },
+    ];
+
     const series = [50, 25, 25];
     return (
         <div className="md:col-span-5 lg:col-span-4 card__shadow rounded-6px border-[1px] border-light_gray relative">
@@ -76,18 +94,20 @@ const SalesChart = () => {
                     />
                 </div>
                 <div className="md:mt-10 ml-2">
-                    <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-[#2D5BFF]"></div>
-                        50% TV
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-[#6284FD]"></div>
-                        25% Laptop
-                    </div>
-                    <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 rounded-full bg-[#96ADFF]"></div>
-                        15% Other
-                    </div>
+                    {chartData?.map((data) => {
+                        return (
+                            <div
+                                className="flex items-center gap-2"
+                                key={data?.id}
+                            >
+                                <div
+                                    className={`h-3 w-3 rounded-full bg-[${data?.color}]`}
+                                ></div>
+                                {data?.title}
+                            </div>
+                        );
+                    })}
+
                     <button className="text-[#2D5BFF] font-popins text-[14px] leading-22px">
                         see details
                     </button>
