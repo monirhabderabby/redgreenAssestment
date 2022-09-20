@@ -19,7 +19,7 @@ const SalesChart = () => {
         },
         responsive: [
             {
-                breakpoint: 400,
+                breakpoint: 800,
                 options: {
                     chart: {
                         width: 200,
@@ -34,7 +34,7 @@ const SalesChart = () => {
 
     const series = [50, 25, 25];
     return (
-        <div className="md:col-span-4 card__shadow rounded-6px border-[1px] border-light_gray relative">
+        <div className="md:col-span-5 lg:col-span-4 card__shadow rounded-6px border-[1px] border-light_gray relative">
             <header className="p-[20px] w-full flex items-center justify-between ">
                 <p className="font-normal text-[24px] leading-32px text-[#181818] font-popins">
                     Sales Chart
@@ -65,11 +65,11 @@ const SalesChart = () => {
             </div>
 
             {/* sales chart start from here*/}
-            <div className="overflow-auto min-w-[300px]">
+            <div className="overflow-auto min-w-[200px]">
                 <ReactApexChart
                     options={options}
                     width="100%"
-                    height={200}
+                    height={180}
                     series={series}
                     type="donut"
                 />
